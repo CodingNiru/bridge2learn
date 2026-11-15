@@ -10,6 +10,8 @@ const {
   title = 'Bridge2Learn',
   description = 'More room to ask questions, build confidence, and learn—wherever a student lives.',
 } = Astro.props;
+const canonicalUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const socialImage = Astro.site ? new URL('/images/learning-landscape.svg', Astro.site) : undefined;
 ---
 
 <!doctype html>
@@ -22,6 +24,14 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    {socialImage && <meta property="og:image" content={socialImage} />}
+    <meta
+      property="og:image:alt"
+      content="Illustration of a student following a path between a village classroom and learning tools."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
