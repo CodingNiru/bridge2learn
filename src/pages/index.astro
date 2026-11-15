@@ -1,0 +1,409 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const infrastructure = [
+  {
+    title: 'A place to learn',
+    detail:
+      'A secure, accessible location for students and the surrounding community — for example, a school, library or community center.',
+  },
+  {
+    title: 'A reliable connection',
+    detail:
+      'High-speed internet, with a 5G gateway or Starlink listed as possible options in the proposal.',
+  },
+  {
+    title: 'Shared devices',
+    detail: 'A Wi-Fi router and Chromebooks or other low-cost laptops.',
+  },
+  {
+    title: 'Learning tools',
+    detail:
+      'Browser-based, freely available AI tools, with subscriptions to selected models if needed. Perplexity and NotebookLM are examples named in the proposal.',
+  },
+  {
+    title: 'Safer access',
+    detail:
+      'Router firewall configuration and limits on distracting sources are part of the proposed cyber-safety setup.',
+  },
+  {
+    title: 'A confident start',
+    detail:
+      'A basic introduction to the tools, with training potentially supported by student volunteers from larger schools.',
+  },
+];
+
+const roadmap = [
+  {
+    title: 'Plan with local partners',
+    detail:
+      'Identify needs, estimate a budget and engage potential partners, including nonprofits.',
+  },
+  {
+    title: 'Raise the funds',
+    detail:
+      'Reach out to nonprofits, individual donors and corporate matching programs.',
+  },
+  {
+    title: 'Test a mock setup',
+    detail:
+      'Build a mock setup in the United States and resolve technical issues before the pilot.',
+  },
+  {
+    title: 'Prepare the pilot site',
+    detail:
+      'Transfer the assets to a remote site, secure internet and train students.',
+  },
+  {
+    title: 'Evaluate progress',
+    detail:
+      'Evaluate progress and document the significance of the project.',
+  },
+];
+---
+
+<SiteLayout
+  title="Bridge2Learn — A bridge to self-learning"
+  description="Bridge2Learn is a proposal for AI-assisted self-learning in Sri Lanka, beginning with an accessible chat-based pilot."
+>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Bridge2Learn home">Bridge<span>2</span>Learn</a>
+    <nav aria-label="Main navigation">
+      <a href="#why">Why it matters</a>
+      <a href="#approach">Approach</a>
+      <a href="#pilot">Pilot plan</a>
+      <a class="nav-cta" href="#get-involved">Get involved <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero page-grid" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">A bridge to<br />learning.</h1>
+        <p class="hero-intro">
+          A proposal for AI-assisted learning in Sri Lanka, starting with more accessible ways to ask,
+          explore and study.
+        </p>
+        <a class="action-link" href="#pilot">
+          Explore the first phase <span aria-hidden="true">↓</span>
+        </a>
+        <p class="hero-context">Bridge2Learn · Self-learning in Sri Lanka</p>
+      </div>
+      <figure class="hero-image">
+        <img
+          src="/images/classroom.png"
+          alt="Students writing together at a shared table in a Sri Lankan classroom."
+          fetchpriority="high"
+          width="1000"
+          height="664"
+        />
+        <figcaption>A classroom in Sri Lanka · Photo by Janith Dulshan / Wikimedia Commons</figcaption>
+      </figure>
+    </section>
+
+    <section class="why section-pad" id="why" aria-labelledby="why-title">
+      <div class="why-heading" data-reveal>
+        <h2 id="why-title">Let learning travel.</h2>
+      </div>
+      <div class="why-body">
+        <p class="lead" data-reveal>
+          The proposal frames quality education as every child’s right, while describing rural
+          communities in Sri Lanka as disproportionately affected by gaps in learning resources.
+        </p>
+        <div class="challenge-list">
+          <article data-reveal>
+            <h3>Fewer ways to get help</h3>
+            <p>Teacher shortages and limited access to extra support can make learning harder to sustain.</p>
+          </article>
+          <article data-reveal>
+            <h3>Digital tools are not within reach</h3>
+            <p>Basic computers and internet access are not always available or connected to learning.</p>
+          </article>
+          <article data-reveal>
+            <h3>AI should widen opportunity</h3>
+            <p>
+              The proposal argues that students need support to use AI, so new technology can help
+              develop their talents rather than leave them behind.
+            </p>
+          </article>
+          <article data-reveal>
+            <h3>Build for lasting support</h3>
+            <p>
+              The proposal questions whether continuously funding extra classes is a scalable
+              long-term answer, and explores AI-supported self-learning as another way to extend help.
+            </p>
+          </article>
+        </div>
+      </div>
+      <figure class="why-image" data-reveal>
+        <img
+          src="/images/admission.jpg"
+          alt="Students at a school admission welcome gathering in Sri Lanka."
+          loading="lazy"
+          width="900"
+          height="675"
+        />
+        <figcaption>School admission gathering, Handessa · January 2020</figcaption>
+      </figure>
+    </section>
+
+    <section class="approach section-pad" id="approach" aria-labelledby="approach-title">
+      <div class="approach-intro" data-reveal>
+        <h2 id="approach-title">Start with self-learning.</h2>
+        <p>
+          The proposed model pairs accessible digital resources with practical guidance, then adds
+          more personalized AI support over time.
+        </p>
+      </div>
+      <div class="approach-image" data-reveal>
+        <img
+          src="/images/seminar.jpg"
+          alt="Students attending a Grade Five scholarship exam seminar in Sri Lanka."
+          loading="lazy"
+          width="900"
+          height="462"
+        />
+        <p class="image-note">Grade Five scholarship exam seminar in Sri Lanka</p>
+      </div>
+      <div class="approach-details" data-reveal>
+        <h3>Start with tools students can reach.</h3>
+        <p>
+          Use internet-based self-learning resources, build digital literacy and work with local
+          organizations to bring support to remote areas.
+        </p>
+        <h3>Let questions lead the way.</h3>
+        <p>
+          The first phase proposes a WhatsApp chat-based learning service using large language
+          models for subject questions and exam preparation.
+        </p>
+        <p class="source-note">
+          The proposal also describes syllabus-specific study using class notes and videos, including
+          Google NotebookLM and the Expert Tutor YouTube channel as examples. It includes a Grade 9
+          question in Tamil with a Gemini answer.
+        </p>
+      </div>
+    </section>
+
+    <section class="phases section-pad" id="pilot" aria-labelledby="phases-title">
+      <div class="phases-heading" data-reveal>
+        <h2 id="phases-title">Start with Phase 1.</h2>
+        <p>
+          The plan is phased. Open a phase to see what the proposal describes; only the first phase
+          is presented as the immediate starting point.
+        </p>
+      </div>
+      <div class="phase-list" data-reveal>
+        <details class="phase" open>
+          <summary>
+            <span>Phase 1</span>
+            <span class="phase-title">Interactive chat-based learning</span>
+            <span class="phase-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="phase-content">
+            <p>
+              Launch a simple, affordable WhatsApp chat system to support student questions and
+              learning. The proposal describes this as the most feasible place to begin.
+            </p>
+            <p>Example uses: questions and answers, subject support and exam preparation.</p>
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span>Phase 2</span>
+            <span class="phase-title">An AI-assisted audio-visual teacher</span>
+            <span class="phase-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="phase-content">
+            <p>
+              Develop a generative AI bot for virtual classroom sessions, described in the proposal
+              as a teacher-like audio-visual experience.
+            </p>
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span>Phase 3</span>
+            <span class="phase-title">Personalized one-to-one tutoring</span>
+            <span class="phase-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="phase-content">
+            <p>
+              Explore specialized small language models shaped around familiar local teaching.
+              The proposal gives a math tutor modeled on a popular local educator as an example.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="hub section-pad" aria-labelledby="hub-title">
+      <div class="hub-heading" data-reveal>
+        <h2 id="hub-title">Build a learning hub.</h2>
+        <p>
+          The first setup described in the proposal brings a place, a connection, shared hardware,
+          useful tools, safer access and a supported start together.
+        </p>
+      </div>
+      <div class="hub-list">
+        {infrastructure.map((item) => (
+          <article class="hub-item" data-reveal>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </article>
+        ))}
+      </div>
+      <figure class="hub-image" data-reveal>
+        <img
+          src="/images/students-meet.jpg"
+          alt="A U.S. State Department official meeting students in Kilinochchi, Sri Lanka, in 2011."
+          loading="lazy"
+          width="1000"
+          height="750"
+        />
+        <figcaption>Students in Kilinochchi, Sri Lanka · 2011</figcaption>
+      </figure>
+    </section>
+
+    <section class="roadmap section-pad" aria-labelledby="roadmap-title">
+      <div class="roadmap-heading" data-reveal>
+        <h2 id="roadmap-title">Plan the first pilot.</h2>
+        <p>
+          The source deck outlines a sequence of planning, fundraising, testing, deployment and
+          evaluation. Dates are not specified.
+        </p>
+      </div>
+      <ol class="roadmap-list">
+        {roadmap.map((step) => (
+          <li data-reveal>
+            <h3>{step.title}</h3>
+            <p>{step.detail}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="budget section-pad" aria-labelledby="budget-title">
+      <div class="budget-intro" data-reveal>
+        <h2 id="budget-title">Costs are still open.</h2>
+        <p>
+          The proposal labels Phase 1 costs as approximate and the total as TBD. Several items still
+          need estimates.
+        </p>
+        <a href="#get-involved" class="text-link">Help shape the pilot <span aria-hidden="true">↗</span></a>
+      </div>
+      <dl class="budget-list" data-reveal>
+        <div>
+          <dt>Internet setup</dt>
+          <dd>About $500</dd>
+          <p>Starlink or wireless setup, as proposed</p>
+        </div>
+        <div>
+          <dt>Internet service</dt>
+          <dd>About $600 / year</dd>
+          <p>One year of service, as proposed</p>
+        </div>
+        <div>
+          <dt>Wi-Fi router</dt>
+          <dd>$100</dd>
+          <p>Proposed hardware estimate</p>
+        </div>
+        <div>
+          <dt>Chromebooks</dt>
+          <dd>5 × $100 · about $500</dd>
+          <p>Five devices, as proposed</p>
+        </div>
+        <div>
+          <dt>Selected AI subscriptions</dt>
+          <dd>About $200 / year</dd>
+          <p>Free browser-based tools are also part of the proposal</p>
+        </div>
+        <div>
+          <dt>Location, safety setup and training</dt>
+          <dd>Not priced</dd>
+          <p>Estimates and arrangements remain to be determined</p>
+        </div>
+      </dl>
+    </section>
+
+    <section class="get-involved section-pad" id="get-involved" aria-labelledby="get-involved-title">
+      <div class="get-involved-copy" data-reveal>
+        <h2 id="get-involved-title">Help build this bridge.</h2>
+        <p>
+          The proposal identifies nonprofit partners, individual donors, corporate matching funds
+          and student volunteers as possible parts of the work.
+        </p>
+      </div>
+      <div class="get-involved-action" data-reveal>
+        <a class="action-link action-link-light" href="mailto:?subject=Bridge2Learn%20pilot">
+          Start a conversation <span aria-hidden="true">↗</span>
+        </a>
+        <p>The team’s contact email can be added here before launch.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="wordmark wordmark-footer" href="#top">Bridge<span>2</span>Learn</a>
+      <p>Self-learning in Sri Lanka</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+    <details class="credits">
+      <summary>Image credits</summary>
+      <ul>
+        <li>
+          <a href="https://commons.wikimedia.org/wiki/File:Classroom_in_defence_servies_college.png">
+            “Classroom in defence servies college”
+          </a>
+          by Janith Dulshan, CC BY-SA 4.0.
+        </li>
+        <li>
+          <a href="https://commons.wikimedia.org/wiki/File:Arafa_mmv_handessa_udunuwara_grade_one_new_admission_2020_January.jpg">
+            “Arafa M.M.V. Handessa, grade one new admission”
+          </a>
+          by Siyanco, CC BY-SA 4.0.
+        </li>
+        <li>
+          <a href="https://commons.wikimedia.org/wiki/File:Grade_Five_Scholarship_Exam_Seminars_in_Sri_Lanka.jpg">
+            “Grade Five Scholarship Exam Seminars in Sri Lanka”
+          </a>
+          by Dinesh De Alwis, CC BY-SA 4.0.
+        </li>
+        <li>
+          <a href="https://commons.wikimedia.org/wiki/File:Assistant_Secretary_Blake_Meets_With_Students_in_Sri_Lanka_(5690126747).jpg">
+            “Assistant Secretary Blake Meets With Students in Sri Lanka”
+          </a>
+          by U.S. Department of State, public domain.
+        </li>
+      </ul>
+    </details>
+    <p class="footer-note">
+      This site presents a proposal. Pilot details, costs and partner arrangements are not yet
+      confirmed in the source material.
+    </p>
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll<HTMLElement>('[data-reveal]');
+
+    if ('IntersectionObserver' in window) {
+      document.documentElement.classList.add('motion-ready');
+      const observer = new IntersectionObserver(
+        (entries, currentObserver) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              currentObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      revealItems.forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
+        observer.observe(item);
+      });
+    }
+  </script>
+</SiteLayout>
