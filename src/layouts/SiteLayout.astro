@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'Bridge2Learn',
-  description = 'A proposal for AI-assisted self-learning in Sri Lanka.',
+  description = 'More room to ask questions, build confidence, and learn—wherever a student lives.',
 } = Astro.props;
 ---
 
@@ -19,6 +19,9 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f4f6ef" />
     <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>

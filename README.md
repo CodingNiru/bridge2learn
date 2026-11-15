@@ -1,6 +1,8 @@
 # Bridge2Learn
 
 Bridge2Learn is a static Astro site. The production build is written to `dist/`.
+The illustrations in `public/images/` are original SVG artwork created for this site; the page
+does not depend on remotely hosted photos or image services.
 
 ## Run locally
 
